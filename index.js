@@ -2,7 +2,7 @@ const YoutubeMp3Downloader = require("./lib/YoutubeMp3Downloader");
 const url = require('url');
 
 const YD = new YoutubeMp3Downloader({
-    "ffmpegPath": "./ffmpeg/ffmpeg",
+    "ffmpegPath": "/usr/local/Cellar/ffmpeg/4.2.1/bin/ffmpeg",
     "outputPath": "./output",
     "youtubeVideoQuality": "highest",
     "queueParallelism": 40,
