@@ -1,5 +1,5 @@
 {
-  "name": "youtube-mp3-downloader",
+  "name": "suxino-mp3-download",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,11 +7,7 @@
     "lib": "lib"
   },
   "dependencies": {
-    "async": "^3.1.0",
-    "fluent-ffmpeg": "^2.1.2",
-    "progress-stream": "^2.0.0",
-    "sanitize-filename": "^1.6.2",
-    "ytdl-core": "^2.1.7"
+    "youtube-mp3-downloader": "^0.7.6"
   },
   "devDependencies": {},
   "scripts": {

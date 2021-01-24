@@ -1,8 +1,7 @@
-const YoutubeMp3Downloader = require("./lib/YoutubeMp3Downloader");
-const url = require('url');
+const YoutubeMp3Downloader = require("youtube-mp3-downloader");
 
 const YD = new YoutubeMp3Downloader({
-    "ffmpegPath": "/usr/local/Cellar/ffmpeg/4.2.1/bin/ffmpeg",
+    "ffmpegPath": "/usr/local/Cellar/ffmpeg/4.3.1_9/bin/ffmpeg",
     "outputPath": "./output",
     "youtubeVideoQuality": "highest",
     "queueParallelism": 40,
@@ -18,6 +17,5 @@ const lineReader = require('readline').createInterface({
 });
 
 lineReader.on('line', (line) => {
-    const videoId = url.parse(line, true).query.v;
-    YD.download(videoId)
+   YD.download(new URL(line).searchParams.get('v'))
 });
