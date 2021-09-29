@@ -17,5 +17,9 @@ const lineReader = require('readline').createInterface({
 });
 
 lineReader.on('line', (line) => {
-   YD.download(new URL(line).searchParams.get('v'))
+    try {
+        YD.download(new URL(line).searchParams.get('v'))
+    } catch (e) {
+        console.log(e)
+    }
 });
