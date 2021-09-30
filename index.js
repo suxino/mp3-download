@@ -8,8 +8,17 @@ const YD = new YoutubeMp3Downloader({
     "progressTimeout": 2000
 });
 
+/**
+ * @param {YoutubeMp3Downloader.IVideoTask} param
+ * @return {string}
+ */
+const parseProgress = ({videoId, progress}) => {
+    const percentage = progress.percentage.toFixed(2)
+    return `Video ID: ${videoId} - Downloaded: ${percentage}% - Runtime: ${progress.runtime}s`
+}
+
 YD.on("progress", (progress) => {
-    console.log(JSON.stringify(progress));
+    console.log(parseProgress(progress));
 });
 
 YD.on("error", (error) => {
