@@ -21,8 +21,8 @@ YD.on("progress", (progress) => {
     console.log(parseProgress(progress));
 });
 
-YD.on("error", (error) => {
-    console.error(error)
+YD.on("error", (error, data) => {
+    console.error(error, data)
 })
 
 YD.on("queueSize", (total) => {
