@@ -1,7 +1,7 @@
 const YoutubeMp3Downloader = require("youtube-mp3-downloader");
 
 const YD = new YoutubeMp3Downloader({
-    "ffmpegPath": "/opt/homebrew/Cellar/ffmpeg/4.4.1_5/bin/ffmpeg",
+    "ffmpegPath": "/usr/local/Cellar/ffmpeg/5.1.2/bin/ffmpeg",
     "outputPath": "./output",
     "youtubeVideoQuality": "highestaudio",
     "queueParallelism": 40,
