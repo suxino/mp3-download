@@ -4,8 +4,12 @@
   "description": "Download multiple youtube videos and convert them to MP3",
   "main": "index.js",
   "dependencies": {
+    "@distube/ytdl-core": "^4.14.4",
+    "async": "^3.2.4",
     "ffmpeg-static": "^5.2.0",
-    "youtube-mp3-downloader": "^0.7.11"
+    "fluent-ffmpeg": "2.1.2",
+    "progress-stream": "^2.0.0",
+    "sanitize-filename": "^1.6.3"
   },
   "scripts": {
     "run": "node index.js"

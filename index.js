@@ -1,4 +1,4 @@
-const YoutubeMp3Downloader = require("youtube-mp3-downloader");
+const YoutubeMp3Downloader = require("./YoutubeMp3Downloader");
 const pathToFfmpeg = require('ffmpeg-static');
 
 const YD = new YoutubeMp3Downloader({
